@@ -9,7 +9,8 @@ jobs:
 
    steps:
     - name: SonarQubeScan
-      uses: SonarSource/sonarqube-scan-action@v4
+      run: mvn -B verify sonar:sonar -Dsonar.projectKey=nitin2925_Devsecops-pipeline -Dsonar.organization=nitin2925 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env: 
        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    
     
