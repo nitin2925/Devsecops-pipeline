@@ -9,6 +9,9 @@ jobs:
     DOCKER_IMAGE: nit2925docker/devops-repo:${{ github.sha }}
 
    steps:
+   - name: Docker set up
+     uses: docker/setup-docker-action@v4.1.0
+     
    - name: Build Docker Image
      run : |
       sudo docker build -t ${{ env.DOCKER_IMAGE }} .
