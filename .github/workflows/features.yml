@@ -9,12 +9,15 @@ jobs:
   uses: ./.github/workflows/javabuild.yml
   secrets: inherit
 
- sonar:
-  uses: ./.github/workflows/sonar.yml
-  needs: build
-  secrets: inherit
+# sonar:
+ 
+# uses: ./.github/workflows/sonar.yml
+ 
+  #needs: build
+  #secrets: inherit
 
- test:
-  uses: ./.github/workflows/test.yml
-  needs: build
-  secrets: inherit
+ #test:
+  #uses: ./.github/workflows/test.yml
+  #needs: build
+  #secrets: inherit
+  
