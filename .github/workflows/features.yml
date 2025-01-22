@@ -8,3 +8,7 @@ jobs:
  build:
   uses: ./.github/workflows/javabuild.yml
   secrets: inherit
+
+ sonar:
+  uses: ./.github/workflows/sonar.yml
+  secrets: inherit
