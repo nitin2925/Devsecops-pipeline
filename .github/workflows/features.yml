@@ -16,6 +16,11 @@ jobs:
 
  test:
   uses: ./.github/workflows/test.yml
-  needs: build
+  needs: sonar
+  secrets: inherit
+
+ imagepush:
+  uses:  ./.github/workflows/imagepush.yml
+  needs: test
   secrets: inherit
   
