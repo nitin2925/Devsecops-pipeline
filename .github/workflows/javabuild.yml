@@ -21,9 +21,10 @@ jobs:
 
     - name: Cache Maven Dependencies
       uses: actions/cache@v4
-       with:
+      with: 
         path: ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          
+     
+                
     - name: Build with Maven
       run: mvn -B package --file pom.xml
